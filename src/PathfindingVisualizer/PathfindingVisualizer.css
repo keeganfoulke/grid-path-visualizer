@@ -1,0 +1,32 @@
+.grid {
+  will-change: transform;
+  padding-top: 12px;
+  position: center;
+  margin: 1 auto;
+  border: turquoise;
+  object-fit: fill;
+  line-height: 0;
+}
+
+.button-toolbar {
+  background-color: rgb(8, 70, 70);
+  height: 54px;
+  padding: 12px;
+  align-items: left;
+}
+
+.button-toolbar span {
+  padding-right: 24px;
+  float: left;
+  align-items: baseline;
+  font-size: 16px;
+}
+
+.button-toolbar span:nth-of-type(1) {
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: text-top;
+}
+
+.option-buttons {
+  background-color: white;
+}

@@ -1,0 +1,108 @@
+.node {
+  width: 20px;
+  height: 20px;
+  outline: 1px solid rgb(175, 216, 248);
+  margin: 0;
+  padding: -1;
+  display: inline-block;
+  line-height: 0;
+}
+.node-finish {
+  background-color: red;
+}
+
+.node-start {
+  background-color: green;
+}
+
+.node-visited {
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 65, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(167, 191, 228, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(20, 216, 164, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(31, 123, 138, 0.75);
+  }
+}
+
+.node-wall {
+  will-change: transform;
+  animation-name: wallAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.02s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  background-color: rgb(12, 53, 71);
+}
+
+/* @keyframes wallAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgb(12, 53, 71);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(12, 53, 71);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(12, 53, 71);
+  }
+} */
+
+.node-shortest-path {
+  animation-name: shortestPath;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 156);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 156);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 156);
+  }
+}
